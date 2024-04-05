@@ -24,6 +24,7 @@ return resultado;
 } 
 */
 
+
 function somarInput()
 {
     var n1 = num1.value;
