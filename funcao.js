@@ -34,3 +34,41 @@ function somarInput()
     console.log(resultado);   
 }
 
+function par()
+{
+    var n1 = parseInt(num1.value);
+
+    var resto = n1 % 2;
+
+    if (resto == 0)
+    {
+        res.value = "Par";
+    } 
+    else
+    {
+        res.value = "Impar";
+    }
+}
+
+/*
+    Alcool ou gasolina
+    70% da gasolina
+*/
+function combustivel()
+{
+    var gas = parseFloat(num1.value);
+    var alc = parseFloat(num2.value);
+
+    var resultado = alc / gas;
+
+    if (resultado >= 0.7)
+    {
+        res.value = "Gasolina";
+    }
+    else 
+    {
+        res.value = "Alcool";
+    }
+}
+
+
