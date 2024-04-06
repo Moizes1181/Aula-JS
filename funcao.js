@@ -131,8 +131,8 @@ function fibonacci()
 {
     var inicio = 1;
     var fim =  parseInt(num1.value);
-    var nfiboanterior = 0;
-    var nfiboatual = 0;
+    var nfiboPenultimo = 0;
+    var nfiboUltimo = 0;
     var nfibo = 0;
 
     if (inicio = 1)
@@ -141,28 +141,22 @@ function fibonacci()
       nfiboatual = 1;
       res.value = res.value + " " + nfiboatual + " ";                 
     }
-
-    if (inicio = 2)
-    { 
-        nfiboanterior = 1;
-        nfiboatual = 1;
-        res.value = res.value + " " + nfiboatual + " ";  
-               
-    }
-
-    if (inicio => 3)
+    
+    if (inicio => 1)
     
     {         
-        nfiboatual = 1;
-        nfiboanterior = 1;
+        nfiboUltimo = 1;
+        nfiboPenultimo = 0;
 
-        while (inicio+2 <= fim) {
+        while (inicio <= fim) {
 
-            nfibo = nfiboatual + nfiboanterior;
+            nfibo = nfiboUltimo + nfiboPenultimo;
             
             res.value = res.value + " " + nfibo + " ";
-            nfiboanterior = nfiboatual; 
-            nfiboatual = nfibo;            
+            
+            nfiboPenultimo = nfiboUltimo; 
+            nfiboUltimo = nfibo;
+            
             inicio = inicio + 1             
         }
     }    
