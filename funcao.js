@@ -71,4 +71,105 @@ function combustivel()
     }
 }
 
+function diasDevida() {
+    // Obtém a data de nascimento do input
+    const dataNascimento = new Date(document.getElementById('dataNascimento').value);
+    
+    // Obtém a data atual
+    const dataAtual = new Date();
 
+    // Calcula a diferença em milissegundos
+    const diferencaEmMilissegundos = dataAtual - dataNascimento;
+
+    // Converte a diferença de milissegundos para dias
+    const diasDeVida = Math.floor(diferencaEmMilissegundos / (1000 * 60 * 60 * 24));
+
+    // Exibe o resultado na página
+    document.getElementById('resultado').textContent = `Você tem aproximadamente ${diasDeVida} dias de vida.`;
+  }
+
+function contagem()
+{
+var inicio = 1;
+var fim = parseInt(num1.value)
+
+    while (inicio <= fim) {
+        res.value = res.value + " " + inicio + " ";
+        inicio = inicio + 1;        
+    }
+
+}
+
+function regressiva()
+{
+    var inicio = parseInt(num1.value);
+    var fim = 1;
+
+    while (inicio >= fim) {
+        res.value = res.value + " " + inicio + " ";
+        inicio = inicio - 1;        
+    }
+}   
+
+function fatorial() 
+{
+    var inicio = 1;
+    var fim =  parseInt(num1.value);
+    var total = 1;
+
+    while (inicio <= fim) {
+        total = total * inicio;
+        inicio = inicio + 1;                         
+        
+    }
+
+    res.value = total;  
+}
+
+
+function fibonacci() 
+{
+    var inicio = 1;
+    var fim =  parseInt(num1.value);
+    var nfiboanterior = 0;
+    var nfiboatual = 0;
+    var nfibo = 0;
+
+    if (inicio = 1)
+    { 
+      nfiboanterior = 0;
+      nfiboatual = 1;
+      res.value = res.value + " " + nfiboatual + " ";                 
+    }
+
+    if (inicio = 2)
+    { 
+        nfiboanterior = 1;
+        nfiboatual = 1;
+        res.value = res.value + " " + nfiboatual + " ";  
+               
+    }
+
+    if (inicio => 3)
+    
+    {         
+        nfiboatual = 1;
+        nfiboanterior = 1;
+
+        while (inicio+2 <= fim) {
+
+            nfibo = nfiboatual + nfiboanterior;
+            
+            res.value = res.value + " " + nfibo + " ";
+            nfiboanterior = nfiboatual; 
+            nfiboatual = nfibo;            
+            inicio = inicio + 1             
+        }
+    }    
+
+
+
+} 
+               
+      
+   
