@@ -132,38 +132,30 @@ function fibonacci()
     var inicio = 1;
     var fim =  parseInt(num1.value);
     var nfiboPenultimo = 0;
-    var nfiboUltimo = 0;
+    var nfiboUltimo = 1;
     var nfibo = 0;
-
+    
     if (inicio = 1)
     { 
-      nfiboanterior = 0;
-      nfiboatual = 1;
-      res.value = res.value + " " + nfiboatual + " ";                 
+        nfiboanterior = 0;
+        nfiboatual = 1;
+        res.value = res.value + " " + nfiboatual + " ";                 
     }
     
-    if (inicio => 1)
-    
-    {         
-        nfiboUltimo = 1;
-        nfiboPenultimo = 0;
+    while (inicio+1 <= fim) {
 
-        while (inicio <= fim) {
-
-            nfibo = nfiboUltimo + nfiboPenultimo;
+        nfibo = nfiboUltimo + nfiboPenultimo;
             
-            res.value = res.value + " " + nfibo + " ";
-            
-            nfiboPenultimo = nfiboUltimo; 
-            nfiboUltimo = nfibo;
-            
-            inicio = inicio + 1             
-        }
-    }    
+        res.value = res.value + " " + nfibo + " ";            
+        nfiboPenultimo = nfiboUltimo; 
+        nfiboUltimo = nfibo
+        inicio = inicio + 1             
+    }
+}    
 
 
 
-} 
+ 
                
       
    
