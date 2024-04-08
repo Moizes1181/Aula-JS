@@ -25,8 +25,8 @@ function listar()
     var alunos = ["Ana", "Pedro", "Maria", "Carlos", "Paulo", "Thiago", "Lulu"  ];
 
     res.innerHTML = alunos[0] + "<br>";
-    res.innerHTML = res.innerHTML + alunos[1] + "<br>";
-    res.innerHTML = res.innerHTML + alunos[2] + "<br>";
+    res.innerHTML = alunos[1] + "<br>";
+    res.innerHTML = alunos[2] + "<br>";
     
     res.innerHTML = "";
 
@@ -77,3 +77,46 @@ function consoantes()
     res.innerHTML += "Total de consoantes é: "+contadorConsoantes + "<br>";  
 }
 
+function parImpar() {
+
+    var listaNumeros = [];
+    var listaPares = [];
+    var listaImpares = [];
+    res.innerHTML = "";
+   
+
+    for (var ini = 0; ini < 20; ini +=1 ) {
+        
+        var numeroDigitado = parseInt(prompt("Digite o " + (ini + 1) + "º número inteiro:"));
+        listaNumeros.push(numeroDigitado);
+
+        var resto = numeroDigitado % 2;
+
+        if (resto == 0)
+    {
+        listaPares.push(numeroDigitado);
+
+    } 
+    else
+    {
+        listaImpares.push(numeroDigitado);
+      //  res.innerHTML += listaImpares[ini] + "<br>";  
+    }
+}
+
+for (var ini = 0, ult = listaNumeros.length - 1;  ini <= ult; ini += 1)
+    {
+        resnd.innerHTML += listaNumeros[ini] + "<br>"; 
+    }
+
+ for (var ini = 0, ult = listaPares.length - 1;  ini <= ult; ini += 1)
+    {
+        resndPares.innerHTML += listaPares[ini] + "<br>"; 
+    }
+
+for (var ini = 0, ult = listaImpares.length - 1;  ini <= ult; ini += 1)
+    {
+        resndImpares.innerHTML += listaImpares[ini] + "<br>";   
+    }        
+
+ }
