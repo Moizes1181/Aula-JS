@@ -137,21 +137,28 @@ function fibonacci()
     
     if (inicio = 1)
     { 
-        nfiboanterior = 0;
-        nfiboatual = 1;
-        res.value = res.value + " " + nfiboatual + " ";                 
+        nfiboPenultimo = 0;
+        nfibo = 1;
+        res.value += nfibo + " ";                 
     }
     
     while (inicio+1 <= fim) {
 
         nfibo = nfiboUltimo + nfiboPenultimo;
             
-        res.value = res.value + " " + nfibo + " ";            
+        res.value += " " + nfibo + " ";            
         nfiboPenultimo = nfiboUltimo; 
         nfiboUltimo = nfibo
-        inicio = inicio + 1             
+        inicio += 1             
     }
-}    
+}
+
+
+
+
+
+
+
 
 
 

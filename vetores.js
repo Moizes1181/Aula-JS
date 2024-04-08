@@ -22,12 +22,12 @@ alunos.unshift("Lulu")
 
 function listar()
 {
-    var alunos = ["Ana", "Pedro", "Maria"];
+    var alunos = ["Ana", "Pedro", "Maria", "Carlos", "Paulo", "Thiago", "Lulu"  ];
 
     res.innerHTML = alunos[0] + "<br>";
     res.innerHTML = res.innerHTML + alunos[1] + "<br>";
     res.innerHTML = res.innerHTML + alunos[2] + "<br>";
-
+    
     res.innerHTML = "";
 
     var ult = alunos.length - 1;
@@ -37,3 +37,43 @@ function listar()
         res.innerHTML += alunos[ini] + "<br>";
     }
 }
+
+function ordenar()
+{
+    var alunos = ["Ana", "Pedro", "Maria", "Carlos", "Paulo", "Thiago", "Lulu"  ];
+    alunos.sort();
+    res.innerHTML = "";
+    
+    var ult = alunos.length - 1;
+    
+    for (var ini = 0; ini <= ult; ini += 1)
+    {
+        res.innerHTML += alunos[ini] + "<br>";
+    }
+}
+
+function consoantes()
+{
+    var letras = ["A", "P", "M", "C", "E", "I", "L", "O", "X", "U", "Y"];
+    var vogais = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    res.innerHTML = "";
+    var ult = letras.length - 1;
+    var contadorConsoantes = 1;
+    
+    for (var ini = 0; ini <= ult; ini += 1)
+    {   
+        if (vogais.includes(letras[ini]))
+
+        ini = ini;
+
+        else
+        {
+        res.innerHTML += letras[ini] + "<br>";  
+        contadorConsoantes += 1 
+        }      
+        
+    }
+
+    res.innerHTML += "Total de consoantes é: "+contadorConsoantes + "<br>";  
+}
+
