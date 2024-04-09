@@ -82,10 +82,9 @@ function parImpar() {
     var listaNumeros = [];
     var listaPares = [];
     var listaImpares = [];
-    res.innerHTML = "";
-   
+    res.innerHTML = "";    
 
-    for (var ini = 0; ini < 20; ini +=1 ) {
+    for (var ini = 0; ini < 10; ini +=1 ) {
         
         var numeroDigitado = parseInt(prompt("Digite o " + (ini + 1) + "º número inteiro:"));
         listaNumeros.push(numeroDigitado);
@@ -102,21 +101,58 @@ function parImpar() {
         listaImpares.push(numeroDigitado);
       //  res.innerHTML += listaImpares[ini] + "<br>";  
     }
-}
+}    
 
-for (var ini = 0, ult = listaNumeros.length - 1;  ini <= ult; ini += 1)
+
+
+
+let listaNumerosNumerico = listaNumeros.map(function(str) {
+    return parseInt(str, 10);
+  });
+  
+  // Ordenando o array numérico
+  listaNumerosNumerico.sort(function(a, b) {
+    return a - b;
+  });
+
+
+
+  let listaParesNumerico = listaPares.map(function(str) {
+    return parseInt(str, 10);
+  });
+  
+  // Ordenando o array numérico
+  listaParesNumerico.sort(function(a, b) {
+    return a - b;
+  });
+
+  let listaImparesNumerico = listaImpares.map(function(str) {
+    return parseInt(str, 10);
+  });
+  
+  // Ordenando o array numérico
+  listaImparesNumerico.sort(function(a, b) {
+    return a - b;
+  });
+
+
+
+
+
+
+for (var ini = 0, ult = listaNumerosNumerico.length - 1;  ini <= ult; ini += 1)
     {
-        resnd.innerHTML += listaNumeros[ini] + "<br>"; 
+        resnd.innerHTML += listaNumerosNumerico[ini] + "<br>"; 
     }
 
- for (var ini = 0, ult = listaPares.length - 1;  ini <= ult; ini += 1)
+ for (var ini = 0, ult = listaParesNumerico.length - 1;  ini <= ult; ini += 1)
     {
-        resndPares.innerHTML += listaPares[ini] + "<br>"; 
+        resndPares.innerHTML += listaParesNumerico[ini] + "<br>"; 
     }
 
-for (var ini = 0, ult = listaImpares.length - 1;  ini <= ult; ini += 1)
+for (var ini = 0, ult = listaImparesNumerico.length - 1;  ini <= ult; ini += 1)
     {
-        resndImpares.innerHTML += listaImpares[ini] + "<br>";   
+        resndImpares.innerHTML += listaImparesNumerico[ini] + "<br>";   
     }        
 
  }
